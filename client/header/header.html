@@ -1,0 +1,52 @@
+<template name="header">
+  <header>
+
+    <div class="company">
+        <div class="logo"><a href="{{pathFor 'account'}}"></a></div>
+        <div>
+            <h2>FIN TRUST</h2>
+            <p>Debts in Safety</p>
+        </div>
+    </div>
+
+    <div>
+      <nav class="inline">
+        <ul class="menu">
+          {{#if currentUser}}
+            {{> logoutProfile}}
+          {{else}}
+            {{> signInProfile}}
+          {{/if}}
+          <!-- <li><a href="{{pathFor 'auth'}}">Войти</a></li> -->
+          <li><a href="{{pathFor '/'}}">Финансы</a></li>
+          <li><a href="progress.html">Обязательства</a></li>
+          <li><a href="{{pathFor 'profile'}}">Профиль</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="user">Степанова А. И.</div>
+    <script>
+      const currentLoc = location.href;
+      const menuItem = document.querySelectorAll('a');
+      const menuLength = menuItem.length;
+      for (let i = 0; i < menuLength; i++) {
+        if (menuItem[i].href === currentLoc){
+          menuItem[i].className = "active"
+        }
+      }
+    </script>
+  </header>
+</template>
+
+<template name='logoutProfile'>
+  <div>
+    <li><a href="{{pathFor 'auth'}}" id="logout">Выйти</a></li>
+  </div>
+</template>
+
+<template name='signInProfile'>
+  <div>
+    <li><a href="{{pathFor 'auth'}}">Войти</a></li>
+  </div>
+</template>

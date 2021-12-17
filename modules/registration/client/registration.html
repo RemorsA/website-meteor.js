@@ -1,0 +1,29 @@
+<template name="registration">
+  <main class="pagecenter">
+    <div class="incolumn">
+      <div class="dark__box dark__bg">
+        <h2 class="box__title pagecenter">Регистрация</h2>
+        <div>
+          <form action="index.html" id="auth">
+
+            <p>Введите номер телефона</p>
+            <input type="text" class="input textcenter" placeholder="+79001234567" id="regPhone">
+
+            <label class="control control-checkbox">
+              Я согласен(а) с <a class="red" href="#">политикой конфиденциальности</a> и <a class="red"
+                href="#">условиями обработки персональных данных</a>.
+              <input type="checkbox" id="form" required=""/>
+              <div class="control_indicator"></div>
+            </label>
+
+            <div class="inline">
+              <a href="{{pathFor auth}}" class="dark__button rightmargin">Войти в кабинет</a>
+              <button disabled="" type="submit" form="auth" href="index.html" class="button red__bg btn" id="signUp"
+                style="width: 55%;">Регистрация</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>

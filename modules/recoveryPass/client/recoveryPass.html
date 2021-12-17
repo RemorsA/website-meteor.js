@@ -1,0 +1,21 @@
+<template name="recoveryPass">
+  <main class="pagecenter">
+    <div class="incolumn">
+      <div class="dark__box dark__bg">
+        <h2 class="box__title pagecenter">Восстановление пароля</h2>
+        <div>
+          <form action="index.html" id="auth">
+            <p>Введите номер телефона владельца аккаунта</p>
+            <input type="text" class="input textcenter" placeholder="+79001234567" id="inputRecPass">
+            <div class="inline">
+              <a href="{{pathFor 'auth'}}" class="dark__button rightmargin">Войти в кабинет</a>
+              <button id="recPass" type="submit" form="auth" href="{{pathFor registration}}" class="button red__bg "
+                style="width: 55%;">Восстановить пароль</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>

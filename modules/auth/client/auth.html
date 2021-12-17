@@ -1,0 +1,28 @@
+<template name="auth">
+  
+  <main class="pagecenter">
+    <div class="incolumn">
+      <div class="dark__box dark__bg" style="margin-bottom: 20px;">
+        <h2 class="box__title pagecenter">С возвращением</h2>
+        <div>
+          <form action="index.html" id="auth">
+            <p>Введите номер телефона</p>
+            <input type="text" class="input textcenter" placeholder="+79001234567" id="logPhone">
+            <p>Введите пароль</p>
+            <input type="password" class="input textcenter" placeholder="XXXXXXXXXX" id="logPass">
+            <div class="inline">
+              <a href="{{pathFor 'recoveryPass'}}" class="dark__button rightmargin">Напомнить пароль</a>
+              <button id="signIn" type="submit" form="auth" href="index.html" class="button red__bg " style="width: 55%;">Войти в
+                кабинет</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="pagecenter">
+        <a class="button red__bg" href="{{pathFor 'registration'}}">Зарегистрировать личный кабинет</a>
+      </div>
+    </div>
+
+  </main>
+</template>

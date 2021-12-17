@@ -1,0 +1,171 @@
+<template name="profile">
+  {{> header}}
+  <main class="inline">
+
+    <div class="incolumn rightmargin">
+
+
+      <div class="box white__bg">
+        <h2 class="box__title">Персональные данные</h2>
+
+        <form action="profile.html" method="post">
+          <div>
+            <label id="lastName" for="lastname" class="label">Фамилия</label>
+            <input type="text" name="lastname" class="input" placeholder="Фамилия">
+          </div>
+          <div>
+            <label for="firstname" class="label">Имя</label>
+            <input type="text" name="firstname" class="input" placeholder="Имя" id="name">
+          </div>
+          <div>
+            <label for="patronymic" class="label">Отчество</label>
+            <input type="text" name="patronymic" class="input" placeholder="Отчество" id="middleName">
+          </div>
+          <div>
+            <label for="birthday" class="label">Дата Рождения</label>
+            <input type="date" max="01/01/2020" name="birthday" class="input" placeholder="01.01.1970" id="date">
+          </div>
+        </form>
+      </div>
+
+
+
+      <div class="box white__bg">
+        <h2 class="box__title">Паспортные данные</h2>
+        <form action="profile.html" method="post">
+          <div class="inline">
+            <div class="rightmargin">
+              <label for="passportserial" class="label">Серия</label>
+              <input type="number" name="passportserial" class="input" placeholder="1234" id="batch">
+            </div>
+            <div>
+              <label for="passportserial" class="label">Номер</label>
+              <input type="number" name="passportserial" class="input" placeholder="123456" id="Numberr">
+            </div>
+          </div>
+
+
+          <div>
+            <label for="passportissued" class="label">Кем выдан</label>
+            <textarea name="passportissued" rows="3" class="textarea" placeholder="Кем выдан" id="whoIssuedIt"></textarea>
+          </div>
+
+          <div class="inline">
+            <div class="rightmargin">
+              <label for="passportdateissue" class="label">Дата выдачи</label>
+              <input type="date" name="passportdateissue" class="input" id="dateOfIssue">
+            </div>
+            <div>
+              <label for="passportcode" class="label">Код-подразделения</label>
+              <input type="number" name="passportcode" class="input" placeholder="123-456" id="unitCode">
+            </div>
+          </div>
+
+          <div>
+            <label for="city" class="label">Населённый пункт</label>
+            <input type="text" name="city" class="input" placeholder="Москва" id="locality">
+          </div>
+          <div>
+            <label for="street" class="label">Улица</label>
+            <input type="text" name="street" class="input" placeholder="Картинная" id="street">
+          </div>
+          <div class="inline">
+            <div class="rightmargin">
+              <label for="house" class="label">Дом</label>
+              <input type="number" name="house" class="input" placeholder="12" id="house">
+            </div>
+            <div class="rightmargin">
+              <label for="structure" class="label">Строение</label>
+              <input type="nember" name="structure" class="input" placeholder="23" id="stroenie">
+            </div>
+            <div class="rightmargin">
+              <label for="build" class="label">Корпус</label>
+              <input type="number" name="build" class="input" placeholder="34" id="corpus">
+            </div>
+            <div>
+              <label for="apart" class="label">Квартира</label>
+              <input type="number" name="apart" class="input" placeholder="45" id="apartment">
+            </div>
+          </div>
+          <label class="control control-checkbox">
+            Указать ранее выданный паспорт
+            <input type="checkbox" />
+            <div class="control_indicator"></div>
+          </label>
+          
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="incolumn">
+
+      <div class="box white__bg">
+        <h2 class="box__title">Контактные данные</h2>
+        <form action="profile.html" method="post">
+          <div>
+            <label for="email" class="label">Электронная почта (для документов)</label>
+            <input type="email" name="email" class="input" placeholder="myinbox@mail.ru" id="emaill">
+          </div>
+          <div>
+            <label for="tel" class="label">Телефон</label>
+            <input id="profPhone" type="tel" name="tel" class="input" placeholder="+79001234567" value="">
+          </div>
+          <div>
+            <label for="tel2" class="label">Телефон (запасной)</label>
+            <input type="tel" name="tel2" class="input" placeholder="+79001234567" id="emergencyPhone">
+          </div>
+        </form>
+      </div>
+
+
+
+      <div class="box white__bg">
+        <h2 class="box__title">Адресные данные</h2>
+        <form action="profile.html" method="post">
+          <div>
+            <label for="postindex" class="label">Почтовый индекс</label>
+            <input type="number" name="postindex" class="input" placeholder="123456" id="zipCode">
+          </div>
+
+          <div>
+            <label for="city" class="label">Населённый пункт</label>
+            <input type="text" name="city" class="input" placeholder="Москва" id="locality2">
+          </div>
+          <div>
+            <label for="street" class="label">Улица</label>
+            <input type="text" name="street" class="input" placeholder="Картинная" id="street2">
+          </div>
+          <div class="inline">
+            <div class="rightmargin">
+              <label for="house" class="label">Дом</label>
+              <input type="number" name="house" class="input" placeholder="12" id="house2">
+            </div>
+            <div class="rightmargin">
+              <label for="structure" class="label">Строение</label>
+              <input type="number" name="structure" class="input" placeholder="23" id="stroenie2">
+            </div>
+            <div class="rightmargin">
+              <label for="build" class="label">Корпус</label>
+              <input type="number" name="build" class="input" placeholder="34" id="corpus2">
+            </div>
+            <div>
+              <label for="apart" class="label">Квартира</label>
+              <input type="number" name="apart" class="input" placeholder="45" id="apartment2">
+            </div>
+          </div>
+
+          <label class="control control-checkbox">
+            Я проживаю по адресу постоянной регистрации
+            <input type="checkbox" checked="checked" />
+            <div class="control_indicator"></div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </main>
+  <button type="submit" class="button red__bg btn" id="saveData" style="width: 55%;">Сохранить данные</button>
+</template>
